@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="">
+    <a href="">hii</a>
+</div>
+<div class="">
+    <a href="">hello</a>
+</div>
+
+    
+</body>
+    <script>
+        document.addEventListener(
+            "contextmenu",
+            function(event){
+                console.log(event);
+                event.preventDefault()
+            }
+        );
+        document.addEventListener(
+            "keydown",
+            function(event){
+                console.log(event.code);
+                // event.preventDefault()
+                if(event.code == "KeyI" && event.shiftKey == true && event.ctrlKey == true){
+                    event.preventDefault()
+                }
+                if(event.code == 'F12'){
+                    event.preventDefault()
+                }
+            }
+        );
+    </script>
+</html>
